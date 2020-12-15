@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Form view -->
+    <record id="view_it_asset_form" model="ir.ui.view">
+        <field name="name">it.asset.form</field>
+        <field name="model">it.asset</field>
+        <field name="arch" type="xml">
+            <form string="IT Asset">
+                <sheet>
+                    <div class="oe_title">
+                        <h1>
+                            Asset Profile
+                        </h1>
+                    </div>
+                    <group string="Employee Details">
+                        <group>
+                            <field name="name"/>
+                            <field name="department_id"/>
+                            <field name="job_id"/>
+                            <field name="work_email"/>
+                            <field name="mobile_phone"/>
+                        </group>
+                        <group>
+                            <field name="work_location"/>
+                            <field name="device"/>
+                            <field name="asset_property"/>
+                        </group>
+                    </group>
+
+                    <group string="Authorities Acknowledgement Details">
+                        <group string="Human Resource">
+                            <field name="hr_name"/>
+                            <field name="hr_department"/>
+                            <field name="hr_designation"/>
+                        </group>
+                        <group string="Information Technology">
+                            <field name="admin_name"/>
+                            <field name="admin_department"/>
+                            <field name="admin_designation"/>
+                        </group>
+                    </group>
+
+
+                    <!--Tab information-->
+                    <notebook>
+
+                        <page string="Assets Information">
+                            <field name="asset_line_ids" mode="tree">
+                                <tree string="Assets Details" editable="bottom" colors="red:return_date==True">
+                                    <field name="product_id"/>
+                                    <field name="details"/>
+                                    <field name="model_name"/>
+                                    <field name="vendor_name"/>
+                                    <field name="brand_name"/>
+                                    <field name="receive_date"/>
+                                    <field name="return_date" />
+                                </tree>
+                            </field>
+                        </page>
+
+                        <page string="Network">
+                            <group>
+                                <field name="ip_address" style="width:200px"/>
+                                <field name="subnet_masks" style="width:200px"/>
+                                <field name="gateway" style="width:200px"/>
+                            </group>
+                        </page>
+
+                        <!--Note if your needed-->
+                        <page string="Note">
+                            <field name="note" class="oe_inline" placeholder="Terms and conditions..."/>
+                        </page>
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+    <!-- Tree view -->
+    <record id="view_it_asset_tree" model="ir.ui.view">
+        <field name="name">it.asset.tree</field>
+        <field name="model">it.asset</field>
+        <field name="arch" type="xml">
+            <tree string="IT Asset">
+                <field name="name"/>
+                <field name="department_id"/>
+                <field name="job_id"/>
+                <field name="device"/>
+                <field name="asset_property"/>
+                <field name="work_location"/>
+            </tree>
+        </field>
+    </record>
+</odoo>

@@ -1,0 +1,89 @@
+<odoo>
+    <!--Template for hotel folio -->
+    <template id="report_asset_policy">
+        <t t-call="web.html_container">
+            <t t-foreach="docs" t-as="o">
+                <t t-call="web.external_layout">
+
+                    <div class="page">
+                        <div class="row">
+                            <div class="col-xs-12">
+                                <div style="padding:30px">
+                                    <h3 style="text-align:center;">Employee Laptop Policy</h3><br/>
+                                    <ol style="text-align: justify;">
+                                        <li style="margin-bottom:10px;"> We encourage employees to use their personal laptops for office use. In that case s/he can avail laptop
+                                            allowance (not more than 1200 BDT) only if employee assures management/IT, s/he will get a new laptop
+                                            after every 36 months of usage. If employees use their personal laptop computers for official purpose,
+                                            company will not bear any other maintenance cost (excluding laptop allowance) for any kind of damage. He
+                                            has to ensure safety of that device.
+                                        </li>
+                                        <li style="margin-bottom:10px;"> Executive and above are eligible to apply (through a laptop allocation form which will be provided by HRD)
+                                            for official laptop only if that employee’s supervisor / department head recommend HR with a proper
+                                            justification of the requirement/necessity. IT department will issue laptops only when CEO finally approves
+                                            the recommendation.
+                                        </li>
+                                        <li style="margin-bottom:10px;"> After allocation of official laptop, no one can avail laptop allowance. Official laptops are parts office
+                                            properties so we encourage employees not to take these outside of office. In case of emergency of work,
+                                            employee can take that outside of office compound, we will count that as exception, but device safety and
+                                            security must be ensured first. S/he should avoid risky locations and encourage visiting at day time. Laptops
+                                            should be kept in a padded carrying case or sleeve during transportation.
+                                        </li>
+                                        <li style="margin-bottom:10px;"> Laptops that are not secured with a cable and left unattended overnight should be kept in a locked drawer
+                                            or cabinet.
+                                        </li>
+                                        <li style="margin-bottom:10px;"> The login password should be changed at least once every quarter, contact IT for tips on secured password.
+                                        </li>
+                                        <li style="margin-bottom:10px;"> Individuals should not attempt to install personal software or hardware or change the system configuration
+                                            including network settings on office laptops/computers without prior consultation with IT Department.
+                                        </li>
+                                        <li style="margin-bottom:10px;"> Employee will ensure the confidentiality of all company information including:<br/>
+                                            7.1. Corporate Plans, Procedures, Policies, Sales Figures, Demos, or Strategies.<br/>
+                                            7.2. Computer Files transferred via USB key, CD, or other media.<br/>
+                                            7.3. Corporate communication including but not limited to E-mail, Instant Messaging.
+                                        </li>
+                                        <li style="margin-bottom:10px;"> Employees will not be held responsible for computer problems resulting from regular usages; however, they
+                                            will be held personally responsible for any problems caused by their negligence.
+                                        </li>
+                                        <li style="margin-bottom:10px;"> Official Laptops can be replaced by the company in case of requirements or damages caused by regular
+                                            uses. But all damage, loss or theft of the laptop arising out of negligence of the employee with regard to
+                                            above policies will be deducted from the employee’s salary, or any other legal action can be taken by
+                                            management.
+                                        </li>
+                                        <li style="margin-bottom:10px;"> Employee will report Loss or Theft of company laptop to IT or management immediately. In the event of
+                                            termination or resignation, all company property, including company laptops, must be returned to
+                                            employer.
+                                        </li>
+                                    </ol>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <table class="table table-condensed table-bordered">
+                            <tr>
+                                <th style="width:50%;">Signature of Employee</th>
+                                <th style="width:50%;">Countersigned By</th>
+                            </tr>
+                            <tr style="height:100px;">
+                                <td style="width:50%;"></td>
+                                <td style="width:50%;"></td>
+                            </tr>
+                            <tr>
+                                <td style="width:50%;">
+                                    Name: <span t-field="o.name"/> <br/>
+                                    Designation: <span t-field="o.job_id"/> <br/>
+                                    Department: <span t-field="o.department_id"/>
+                                </td>
+                                <td style="width:50%;">
+                                    Name: <span t-field="o.admin_name"/> <br/>
+                                    Designation: <span t-field="o.admin_designation"/> <br/>
+                                    Department: <span t-field="o.admin_department"/>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </t>
+            </t>
+        </t>
+    </template>
+</odoo>

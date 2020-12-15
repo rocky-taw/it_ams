@@ -1,0 +1,119 @@
+<odoo>
+    <!--Template for hotel folio -->
+    <template id="report_assets_receive">
+        <t t-call="web.html_container">
+            <t t-foreach="docs" t-as="o">
+                <t t-call="web.external_layout">
+
+                    <div class="page">
+
+                        <div class="col-xs-12" style="padding:20px; font-size:110%">
+                            <h3 style="text-align:center;">Receipt Of Company Property</h3><br/>
+                            <p style="text-align: justify;">
+                            I acknowledge receipt of the below listed company property. I agree to maintain the property in good
+                            condition and to return it when I terminate employment with the company or when requested by my
+                            supervisor. In addition, if I no longer need any of the items, I will report this information to my supervisor.
+                            I agree to notify the company if any of the items are damaged, destroyed, or lost.
+                            </p>
+
+                            <br/>
+
+                            <table class="table table-condensed table-bordered" style="width: 100%;">
+                                <thead>
+                                    <tr>
+                                        <th>SL No.</th>
+                                        <th>Receiving Assets</th>
+                                        <th>Brand</th>
+                                        <th>Model No.</th>
+                                        <th>Signature of Person</th>
+                                    </tr>
+                                    <tr>
+                                        <th colspan="4"></th>
+                                        <th>Receiving</th>
+                                    </tr>
+                                </thead>
+
+                                <tbody>
+                                    <t t-set="i" t-value="1" />
+                                    <tr t-foreach="o.asset_line_ids" t-as="ass" style="height:50px;">
+                                        <td>
+                                            <span t-esc="i"/>
+                                            <t t-set="i" t-value="i+1"/>
+                                        </td>
+                                        <td><span t-field="ass.product_id"/></td>
+                                        <td><span t-field="ass.brand_name"/></td>
+                                        <td><span t-field="ass.model_name"/></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr style="height:40px;">
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+
+                            <br/>
+
+                            <p style="text-align: justify;">
+                                <b>Employee Full Name: <span t-field="o.name"/> </b><br/>
+                                <b>Designation:</b> <span t-field="o.job_id"/> <br/>
+                                <b>Department:</b> <span t-field="o.department_id"/> <br/>
+                                <b>HR/Administration Name:</b> <span t-field="o.hr_name"/>
+                            </p>
+
+                            <br/>
+
+                            <table class="table table-condensed table-bordered" style="width: 100%;">
+                                <thead>
+                                    <tr>
+                                        <th colspan="2">Receiving Section </th>
+                                        <th> Date: <span t-esc="context_timestamp(datetime.datetime.now()).strftime('%Y / %m / %d')"/> </th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr style="height:70px">
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width:33%">Signature of Employee </td>
+                                        <td style="width:34%">Signature of HR/Administration</td>
+                                        <td style="width:33%">Issued by IT</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+
+                            <br/>
+
+                            <table class="table table-condensed table-bordered" style="width: 100%;">
+                                <thead>
+                                    <tr>
+                                        <th colspan="2">Receiving Section </th>
+                                        <th> Date: <span t-esc="context_timestamp(datetime.datetime.now()).strftime('%Y / %m / %d')"/> </th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr style="height:70px">
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width:33%">Signature of Employee </td>
+                                        <td style="width:34%">Signature of HR/Administration</td>
+                                        <td style="width:33%">Issued by IT</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                    </div>
+                </t>
+            </t>
+        </t>
+    </template>
+</odoo>

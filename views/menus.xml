@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <menuitem id="it_asset_management_menu" name="IT Asset Management"/>
+    <menuitem id="it_asset_configuration_menu" name="Configuration" sequence="20" parent="it_asset_management_menu"/>
+    <menuitem id="it_asset_report_menu" name="Pdf Reports" sequence="6" parent="it_asset_management_menu"/>
+
+    <menuitem id="menu_all_it_asset" name="IT Asset" parent="it_ams.it_asset_management_menu" sequence="4"/>
+    <menuitem name="Generate IT Asset" id="menu_open_it_asset_form_tree_all" action="open_it_asset_form_tree_all" sequence="5" parent="menu_all_it_asset" groups="it_ams.group_it_ams_user,it_ams.group_it_ams_manager"/>
+
+    <menuitem id="menu_all_it_asset_product" name="Asset Products" parent="it_ams.it_asset_management_menu" sequence="5"/>
+    <menuitem name="Asset list of Products" id="menu_open_it_asset_product_form_tree_all" action="action_inherited_product_product" sequence="5" parent="menu_all_it_asset_product" groups="it_ams.group_it_ams_user,it_ams.group_it_ams_manager"/>
+</odoo>

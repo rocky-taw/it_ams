@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE xml>
+<odoo noupdate="1">
+    <!--Group for it_ams user -->
+    <record id="group_it_ams_user" model="res.groups">
+        <field name="name">IT Asset Management / User</field>
+        <field eval="[(4, ref('base.user_root'))]" name="implied_ids" />
+    </record>
+    <!--Group for it_ams manager -->
+    <record id="group_it_ams_manager" model="res.groups">
+        <field name="name">IT Asset Management/ Manager</field>
+        <field eval="[(4, ref('it_ams.group_it_ams_user'))]" name="implied_ids" />
+        <field
+            name="users"
+            eval="[(4, ref('base.user_root')), (4, ref('base.user_admin'))]"
+        />
+    </record>
+</odoo>

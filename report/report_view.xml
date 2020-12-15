@@ -1,0 +1,9 @@
+<odoo>
+
+    <report id="report_policy" string="Asset Policy" model="it.asset" report_type="qweb-pdf" file="it_ams.report_asset_policy" name="it_ams.report_asset_policy"/>
+
+    <report id="report_receive" string="Asset Receive" model="it.asset" report_type="qweb-pdf" file="it_ams.report_assets_receive" name="it_ams.report_assets_receive"/>
+
+    <report id="report_return" string="Asset Return" model="it.asset" report_type="qweb-pdf" file="it_ams.report_assets_return" name="it_ams.report_assets_return"/>
+
+</odoo>

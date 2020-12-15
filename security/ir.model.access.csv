@@ -1,0 +1,8 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+
+access_it_ams,it.asset.user,model_it_asset,it_ams.group_it_ams_user,1,1,1,0
+access_it_ams_line,it.asset.line.user,model_it_asset_line,it_ams.group_it_ams_user,1,1,1,0
+
+access_it_ams_manager,it.asset.manager,model_it_asset,it_ams.group_it_ams_manager,1,1,1,1
+access_it_ams_line_manager,it.asset.line.manager,model_it_asset_line,it_ams.group_it_ams_manager,1,1,1,1
+
