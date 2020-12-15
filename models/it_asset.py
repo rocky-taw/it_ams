@@ -4,6 +4,7 @@ from odoo import api, fields, models
 class ITAsset(models.Model):
     _name = "it.asset"
     _description = "IT Asset New"
+    _inherit = ['mail.thread', 'mail.activity.mixin']
 
     name = fields.Many2one('hr.employee', string='Name', required=True)
     department_id = fields.Many2one('hr.department', string='Department')

@@ -3,8 +3,8 @@
 from odoo import fields, models
 
 
-class ProductTemplate(models.Model):
+class ProductProduct(models.Model):
 
-    _inherit = "product.template"
+    _inherit = "product.product"
 
     isAsset = fields.Boolean("Is Asset")
